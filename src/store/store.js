@@ -2,10 +2,12 @@ import {combineReducers, createStore, applyMiddleware, compose} from 'redux';
 import authReducer from '../reducres/authReducer';
 import thunk from 'redux-thunk';
 import uiReducer from '../reducres/uiReducer';
+import notesReducer from '../reducres/notesReducer';
 
 const reducers = combineReducers({
     auth: authReducer,
     ui: uiReducer,
+    notes: notesReducer
 });
 
 // LEE LA DOCUMENTACION EL LITERAL 1.3 PARA DESCARGAR CON NPM

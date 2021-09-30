@@ -13,6 +13,7 @@ import { onAuthStateChanged } from '@firebase/auth';
 import LoadingScreen from '../components/LoadingScreen';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
+import { startLoadinNotes } from '../actions/notes';
 
 const AppRouter = () => {
 
@@ -23,10 +24,12 @@ const AppRouter = () => {
 
     useEffect(() => {
 
-        onAuthStateChanged( auth, user => { // se ejecuta una unica vez y es un obserbable que estara al pendiente si la autenticacion cambia, leer documentacion para mas info
+        onAuthStateChanged( auth, async user => { // se ejecuta una unica vez y es un obserbable que estara al pendiente si la autenticacion cambia, leer documentacion para mas info
             if(user){
                 dispatch( login( user.uid, user.displayName ) );
                 setIsLoggedIn( true );
+
+                dispatch( startLoadinNotes() );
             }else{
                 setIsLoggedIn( false );
             }
