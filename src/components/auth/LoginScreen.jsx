@@ -6,15 +6,16 @@ import { removeError, setError } from '../../actions/ui';
 import { useForm } from '../../hooks/useForm';
 import validator from 'validator';
 
-const LoginScreen = ({ history }) => {
+
+const LoginScreen = () => {
 
     const dispatch = useDispatch();
     const error = useSelector(state => state.ui.msgError);
     const loading = useSelector(state => state.ui.loading);
 
     const [ { email, password }, handleInputChange ] = useForm({
-        email: 'correo@correo.com',
-        password:'123456'
+        email: '',
+        password:''
     });
 
     const handleLogin = e => {
@@ -33,7 +34,6 @@ const LoginScreen = ({ history }) => {
 
         dispatch( removeError() );
         dispatch( startLoginEmailPassword( email, password ) );
-        // history.replace('/');
     }
 
     const handleGoogleLogin = () => {

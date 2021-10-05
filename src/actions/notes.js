@@ -74,21 +74,13 @@ const startSaveNote = note => {
 
         const noteFiresotore = { ...note };
 
+        if( !note.url ) delete noteFiresotore.url;
+        
         // Agregar Image
-        if( !note.url ){
-
-            delete noteFiresotore.url;
-
-        }
-
         if( note.file ){
             const fileUrl = await fileUpload( note.file ); // sube el archivo a cloud dinary
 
-            console.log(fileUrl);
-
             noteFiresotore.url = fileUrl;
-
-            console.log(noteFiresotore);
 
             // eliminar datos no soportados por firebase
             delete noteFiresotore.file;
@@ -120,15 +112,19 @@ const refreshNote = note => ({
     payload: note
 })
 
-const startUploading = ( file ) => {
-    return async (dispactch, getState) => {
-        const { active: note } = getState().notes;
+// const startUploading = ( file ) => {
+//     return async (dispactch, getState) => {
+//         const { active: note } = getState().notes;
         
-        const url = URL.createObjectURL(file);
+//         const url = URL.createObjectURL(file);
+
+//         console.log(url);
+
+//         console.log(URL.revokeObjectURL( url ));
         
-        dispactch( activeNote( note.id, { ...note, url } ) );
-    }
-}
+//         dispactch( activeNote( note.id, { ...note, url } ) );
+//     }
+// }
 
 const startDeleting = id => {
     return async (dispactch, getState) => {
@@ -185,7 +181,7 @@ export {
     setNotes,
     startLoadinNotes,
     startSaveNote,
-    startUploading,
+    // startUploading,
     startDeleting,
     noteLogout
 }

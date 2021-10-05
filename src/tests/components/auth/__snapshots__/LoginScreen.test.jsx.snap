@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <LoginScreen /> Debe de hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="animate__animated animate__fadeIn animate__faster"
+  >
+    <h3
+      class="auth__title mb-5"
+    >
+      Login
+    </h3>
+    <form>
+      <input
+        autocomplete="off"
+        class="auth__input mb-5"
+        name="email"
+        placeholder="Email"
+        type="text"
+        value=""
+      />
+      <input
+        autocomplete="off"
+        class="auth__input mb-5"
+        name="password"
+        placeholder="Password"
+        type="password"
+        value=""
+      />
+      <button
+        class="btn btn-primary pointer btn-block"
+        type="submit"
+      >
+        Login
+      </button>
+      <hr />
+      <div
+        class="auth__social-networks"
+      >
+        <p>
+          Login With Social Networks
+        </p>
+        <div
+          class="google-btn"
+        >
+          <div
+            class="google-icon-wrapper"
+          >
+            <img
+              alt="google button"
+              class="google-icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+            />
+          </div>
+          <p
+            class="btn-text"
+          >
+            <b>
+              Sign in with google
+            </b>
+          </p>
+        </div>
+      </div>
+      <a
+        class="link"
+        href="/auth/register"
+      >
+        Create New Account
+      </a>
+    </form>
+  </div>
+</div>
+`;

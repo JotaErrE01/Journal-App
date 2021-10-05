@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente <LoginScreen /> Debe de hacer match con el sanpshot 1`] = `
+<div>
+  <div
+    class="animate__animated animate__fadeIn animate__faster"
+  >
+    <h3
+      class="auth__title mb-5"
+    >
+      Register
+    </h3>
+    <form>
+      <input
+        autocomplete="off"
+        class="auth__input mb-5"
+        name="name"
+        placeholder="Name"
+        type="text"
+        value=""
+      />
+      <input
+        autocomplete="off"
+        class="auth__input mb-5"
+        name="email"
+        placeholder="Email"
+        type="text"
+        value=""
+      />
+      <input
+        autocomplete="off"
+        class="auth__input mb-5"
+        name="password"
+        placeholder="Password"
+        type="password"
+        value=""
+      />
+      <input
+        autocomplete="off"
+        class="auth__input mb-5"
+        name="password2"
+        placeholder="Conifrm Password"
+        type="password"
+        value=""
+      />
+      <button
+        class="btn btn-primary pointer btn-block mb-5"
+        type="submit"
+      >
+        Register
+      </button>
+      <a
+        class="link"
+        href="/auth/login"
+      >
+        Already Register
+      </a>
+    </form>
+  </div>
+</div>
+`;

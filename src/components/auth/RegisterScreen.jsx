@@ -7,16 +7,16 @@ import { removeError, setError } from '../../actions/ui';
 import { useSelector } from 'react-redux';
 import { starRegisterWithEmailPassworName } from '../../actions/auth';
 
-const RegisterScreen = ({ history }) => {
+const RegisterScreen = () => {
 
     const dispacth = useDispatch();
     const error = useSelector(state => state.ui.msgError);
 
     const [ usuario, handleInputChange ] = useForm({
-        name: 'Jonathan',
-        email: 'correo@correo.com',
-        password: '123456',
-        password2: '123456'
+        name: '',
+        email: '',
+        password: '',
+        password2: ''
     });
 
     const { name, email, password, password2 } = usuario;
@@ -27,7 +27,6 @@ const RegisterScreen = ({ history }) => {
         if(isFormValid()){
             dispacth( removeError() );
             dispacth( starRegisterWithEmailPassworName( email, password, name ) );
-            // history.replace('/');
         }
     }
 

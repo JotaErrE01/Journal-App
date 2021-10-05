@@ -4,15 +4,14 @@ import { GoogleAuthProvider } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBu5XISm-BYPmMMrZdeWYXu9lwmuuPrVZk",
-    authDomain: "react-course-7a750.firebaseapp.com",
-    projectId: "react-course-7a750",
-    storageBucket: "react-course-7a750.appspot.com",
-    messagingSenderId: "364285678064",
-    appId: "1:364285678064:web:c6c86dcecb2bd437898d35"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_ATUHDOMAIN,
+    projectId: process.env.REACT_APP_PROJECTID,
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+    appId: process.env.REACT_APP_APPID,
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);

@@ -5,7 +5,6 @@ import { uiFinishLoading, uiStartLoading } from "./ui";
 import Swal from 'sweetalert2';
 import { noteLogout } from "./notes";
 
-
 export const startLoginEmailPassword = (email, password) => {
     return async dispatch => {
         dispatch( uiStartLoading() );
