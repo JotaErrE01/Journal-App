@@ -37,7 +37,7 @@ const LoginScreen = () => {
     }
 
     const handleGoogleLogin = () => {
-        dispatch( removeError() );
+        // dispatch( removeError() );
         dispatch( startGoogleLogin() );
     }
 
